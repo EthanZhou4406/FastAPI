@@ -1,0 +1,28 @@
+<!--
+ * @Author: Ethan.Zhou ethanzhou4406@outlook.com
+ * @Date: 2022-10-15 20:25:29
+ * @LastEditors: Ethan.Zhou ethanzhou4406@outlook.com
+ * @LastEditTime: 2022-10-15 21:23:31
+ * @FilePath: \FastAPI\No7_获取表单和文件数据\uploadfile.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>这是用来演示fastapi接收文件数据的前端演示</h2>
+    <!--form 中包含文件时编码格式应该是multipart/form-data-->
+    <form action="http://127.0.0.1:8080/file/uploadfile" method="post" enctype="multipart/form-data">
+        <label for="file">文件</label><input type="file" name="file" id="file">
+        <button type="submit">上传文件</button>
+    </form>
+</body>
+
+</html>

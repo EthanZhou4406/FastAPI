@@ -1,0 +1,28 @@
+<!--
+ * @Author: Ethan.Zhou ethanzhou4406@outlook.com
+ * @Date: 2022-10-15 14:17:32
+ * @LastEditors: Ethan.Zhou ethanzhou4406@outlook.com
+ * @LastEditTime: 2022-10-15 14:24:19
+ * @FilePath: \FastAPI\No7_获取表单和文件数据\register.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+</head>
+
+<body>
+    <h2>这是一个测试fastapi获取表单数据的页面</h2>
+    <form action="http://127.0.0.1:8080/register" method="post">
+        <label for="name">用户名：</label><input type="text" name="username" id="name"><br>
+        <label for="pwd">密码：</label><input type="password" name="password" id="pwd"><br>
+        <button type="submit">注册</button>
+    </form>
+</body>
+
+</html>
