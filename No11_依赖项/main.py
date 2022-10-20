@@ -2,7 +2,7 @@
 Author: Ethan.Zhou ethanzhou4406@outlook.com
 Date: 2022-10-19 20:25:15
 LastEditors: Ethan.Zhou ethanzhou4406@outlook.com
-LastEditTime: 2022-10-19 22:03:47
+LastEditTime: 2022-10-20 21:16:15
 FilePath:No11_依赖项\main.py
 Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 '''
@@ -89,6 +89,8 @@ app1 = FastAPI(dependencies=[Depends(verify_key),Depends(verify_token)])
 @app1.get("/student")
 async def read_student():
     return {"msg":"hello"}
+
+# 
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app="main:app",host="127.0.0.1",port=8080,reload=True)
