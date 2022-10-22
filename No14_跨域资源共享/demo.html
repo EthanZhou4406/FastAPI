@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.7.10/dist/vue.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h2>演示跨站请求</h2>
+        <label for="student_id">学号：</label>
+        <input type="text" id="student_id" v-model.number.lazy="student_id" @change="read_student" placeholder="请输入学生学号">
+        <p>查询结果为：</p>
+        <p>{{ stu }}</p>
+    </div>
+    <script type="text/javascript">
+        new Vue({
+            el:'#app',
+            data:{
+                student_id:"",
+                student:"",
+            },
+            methods:{
+                read_student(){
+                    axios.get("http://127.0.0.1:8001/student",
+                        {params:{student_id:this.student_id}}).then(res => {
+                        this.student=res.data["student_id"]
+                        console.log(this)
+                        this.$set(this,"student",res.data["student_id"])
+                    }),error => {
+                        this.student="请求失败"
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>
