@@ -2,11 +2,10 @@
 Author: Ethan.Zhou ethanzhou4406@outlook.com
 Date: 2022-11-02 20:21:40
 LastEditors: Ethan.Zhou ethanzhou4406@outlook.com
-LastEditTime: 2022-11-02 20:38:36
+LastEditTime: 2022-11-05 07:15:03
 FilePath: No19_依赖_中间件_后台应用\main.py
 Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 '''
-from telnetlib import RSP
 from fastapi import FastAPI,BackgroundTasks,Depends,Request
 
 # 创建一个FastAPI实例对象
